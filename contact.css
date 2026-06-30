@@ -1,0 +1,260 @@
+/* ── CONTACT PAGE ── */
+
+.contact-sec {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.contact-sec__layout {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 72px;
+  align-items: start;
+}
+
+/* Left side */
+.contact-intro {
+  font-size: 15px;
+  color: var(--txt2);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.ci {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 20px;
+  background: var(--off);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  border-left: 4px solid var(--gold);
+  transition: box-shadow .2s;
+}
+.ci:hover { box-shadow: 0 6px 20px rgba(0,0,0,.07); }
+
+.ci__icon {
+  width: 46px; height: 46px;
+  border-radius: 11px;
+  background: var(--navy);
+  color: var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.ci__label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--txt3);
+  margin-bottom: 3px;
+}
+
+.ci__value {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--navy);
+  transition: color .15s;
+}
+.ci__value:hover { color: var(--gold); }
+
+/* Socials */
+.contact-socials__label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--txt3);
+  margin-bottom: 12px;
+}
+.contact-socials__row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+.cs-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--off);
+  border: 1px solid var(--border);
+  color: var(--txt);
+  transition: all .18s;
+}
+.cs-btn:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
+.cs-btn--green:hover { background: #25D366; border-color: #25D366; }
+
+/* Availability badge */
+.contact-avail {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(16,185,129,.07);
+  border: 1px solid rgba(16,185,129,.25);
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+.contact-avail__dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: #10B981;
+  flex-shrink: 0;
+  margin-top: 4px;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: .5; transform: scale(1.3); }
+}
+.contact-avail strong { display: block; font-size: 14px; color: #065f46; margin-bottom: 3px; }
+.contact-avail p { font-size: 13px; color: #047857; }
+
+/* Right: form box */
+.contact-form-box {
+  background: var(--off);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,.07);
+}
+
+.contact-form-box__header {
+  background: var(--navy);
+  padding: 28px 36px;
+}
+.contact-form-box__header h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 5px;
+}
+.contact-form-box__header p {
+  font-size: 13.5px;
+  color: rgba(255,255,255,.6);
+}
+
+.cform {
+  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cform__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.cfg {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+.cfg label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  color: var(--txt2);
+}
+.cfg label span { color: var(--gold); }
+
+.cfg input,
+.cfg select,
+.cfg textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 9px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  color: var(--txt);
+  background: #fff;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.cfg input::placeholder,
+.cfg textarea::placeholder { color: var(--txt3); }
+.cfg input:focus,
+.cfg select:focus,
+.cfg textarea:focus {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(0,32,135,.07);
+}
+.cfg select { padding-right: 36px; cursor: pointer; }
+.cfg__arr {
+  position: absolute;
+  right: 13px;
+  bottom: 14px;
+  font-size: 11px;
+  color: var(--txt3);
+  pointer-events: none;
+}
+.cfg textarea { resize: vertical; min-height: 130px; }
+
+.cfg--chk label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: var(--txt2);
+  cursor: pointer;
+}
+.cfg--chk input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: var(--navy);
+  cursor: pointer;
+  appearance: checkbox;
+  -webkit-appearance: checkbox;
+}
+
+.btn--submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px;
+  font-size: 15px;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1199px) {
+  .contact-sec__layout { grid-template-columns: 1fr; gap: 48px; }
+  .cform { padding: 24px; }
+  .contact-form-box__header { padding: 24px; }
+  .cform__row { grid-template-columns: 1fr; }
+}
+@media (min-width: 1400px) {
+  .contact-sec { padding: 120px 0; }
+}

@@ -1,0 +1,147 @@
+/* ── SKILLS PAGE ── */
+
+.skills-sec {
+  padding: 100px 0;
+  background: #fff;
+}
+
+/* 3 big skill cards */
+.skill-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 80px;
+}
+
+.sk-card {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0,0,0,.06);
+  transition: transform .2s, box-shadow .2s;
+}
+.sk-card:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(0,0,0,.11); }
+
+.sk-card__top {
+  padding: 36px 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #fff;
+}
+.sk-card__top i  { font-size: 42px; }
+.sk-card__top span {
+  font-family: 'Syne', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.sk-card__body { padding: 28px; }
+
+.sk-card__bar-wrap { margin-bottom: 24px; }
+.sk-card__bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--txt2);
+  margin-bottom: 8px;
+}
+.sk-card__bar-label strong { color: var(--navy); }
+.sk-card__bar {
+  width: 100%;
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.sk-card__fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease;
+}
+
+.sk-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.sk-card__list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  color: var(--txt2);
+}
+.sk-card__list li i {
+  color: var(--green);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* What I can build */
+.skills-can {
+  background: var(--off);
+  border-radius: 20px;
+  padding: 60px 48px;
+  margin-bottom: 60px;
+  border: 1px solid var(--border);
+}
+.skills-can .sh { margin-bottom: 40px; }
+
+.can-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.can-item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 26px 20px;
+  text-align: center;
+  transition: box-shadow .2s, transform .2s;
+}
+.can-item:hover { box-shadow: 0 8px 28px rgba(0,0,0,.08); transform: translateY(-3px); }
+.can-item i {
+  font-size: 28px;
+  color: var(--navy);
+  margin-bottom: 14px;
+  display: block;
+}
+.can-item h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.can-item p { font-size: 13px; color: var(--txt2); line-height: 1.6; }
+
+/* CTA */
+.skills-cta {
+  text-align: center;
+  padding: 48px;
+  background: var(--navy2);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.skills-cta p {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1199px) {
+  .skill-cards { grid-template-columns: 1fr; }
+  .can-grid { grid-template-columns: 1fr 1fr; }
+  .skills-can { padding: 40px 24px; }
+}
+@media (min-width: 1400px) {
+  .skills-sec { padding: 120px 0; }
+}
